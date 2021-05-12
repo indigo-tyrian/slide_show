@@ -6,14 +6,14 @@ width=640
 height=480
 
 def main():
-    file_list = glob.glob(r'image_changing/*.jpg')
-    print(file_list)
+    image_list = glob.glob(r'IMAGE NAME')
+    print(image_list)
 
-    file_list.sort()
+    image_list.sort()
 
 
     clips = [] 
-    for m in file_list:
+    for m in image_list:
         clip = ImageClip(m).set_duration('00:00:00.50')
         clip = clip.resize(newsize=(width,height))
         clips.append(clip)
